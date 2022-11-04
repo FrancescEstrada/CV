@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  font-family: $font-family-sans-serif;
+  font-size: $regular-font-size;
+  line-height: 24px;
+  background-color: $color-main;
+  color:black;
+}
+main{
+@media (min-width:$width-desktop){
+  display: flex;
+  gap: 20px;
+}
+}
+.cabecera{
+  display: block;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 2rem;
+    margin-bottom: 15px;
+    animation: fadeInDownBig;
+    animation-duration: 1s;
+
+    &__nombre{
+      text-align: center;
+      font-family: $font-titulo;
+     @media (min-width:$width-tablet) {
+       font-size: 40px;
+     }
+    }
+
+    &__info{
+     list-style-type: none;
+     font-style: italic;
+     text-align: center;
+     font-size: 20px;
+    padding-inline-start: 0;
+    }
+   
+    &__lista{
+     padding: 10px;
+    }
+
+    #fotoperfil{
+      float: right;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0.8rem;
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px 30px 10px 10px;
+    
+      @media (max-width: $mqMinWidth) {
+     float: none;
+      }
+    
+    }
+}
+.principal{
+width: 100%;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  text-align: justify;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    animation: fadeInLeftBig;
+    animation-duration: 1s;
+    @media (min-width: $width-desktop){
+      height: 100%;
+
+    }
+    @mixin categorias() {
+      font-weight: 700;
+      text-align: center;
+      padding-bottom: 15px;
+      border-bottom: 2px dashed $color-main-dark;
+       @media (min-width: $mqMinWidth) {
+         font-size: 28px;
+       }
+    }
+  
+    &__educacion{
+      @include categorias()
+
+    }
+    &__laboral{
+      @include categorias()
+
+    }
+    &__universidades{
+      list-style-type: circle;
+     padding-inline-start: 0;
+     
+    }
+    &__listauniversidades,  &__listatrabajos{
+      font-size: $regular-font-size + 2;
+      padding: 10px;
+    }
+    &__listauniversidades--actual{
+      font-style: italic;
+      color: $color-main;
+    }
+    &__direccion{
+      font-weight: 200;
+      font-style: italic;
+    }
+
+    }
+  .extras{
+   max-width: 350px;
+  margin:0;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+ text-align: justify;
+  background-color:$color-main-dark;
+  color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    animation: fadeInRightBig;
+    animation-duration: 1s;
+    @media (min-width: $width-desktop){
+      width: 30%;      
+    }
+    @media (max-width:$width-desktop){
+      margin-top: 15px;
+    }
+    &__listaprogramms{
+      list-style-type: none;
+     
+    }
+    
+    .extras, h3{
+      font-weight: bold;
+    }
+  &__listalanguages{
+      list-style-type: none;
+    }
+    &__listaotros{
+      list-style-type: none;
+      padding-inline-start: 0;
+      
+    }
+
+   &__itemsotros{
+     padding: 20px;
+   }
+   
+    &__itemsotros--enlace a{
+      border: 3px solid $color-detail;
+      border-radius: 10px;
+        text-decoration:none;
+        font-weight: 800;
+        padding: 10px;
+        background-color: #fff;
+         color: $color-detail;
+      }
+      &__itemsotros--enlace a:hover{
+        background-color: $color-detail;
+        color: #fff;
+      }
+  
+  }
+  
+.uoc-footer {
+  margin-top: 1.5rem;
+  font-size: $regular-font-size - 5;
+  text-align: center;
+  
+}
